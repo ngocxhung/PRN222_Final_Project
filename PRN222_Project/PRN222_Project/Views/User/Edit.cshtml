@@ -1,0 +1,182 @@
+﻿@model PRN222_Project.Models.User
+
+@{
+    ViewData["Title"] = "Chỉnh sửa Nhân Viên";
+}
+
+<style>
+    body {
+        background-color: #f4f6f9;
+    }
+
+    .form-container {
+        max-width: 600px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        margin: auto;
+    }
+
+    .avatar-preview {
+        display: block;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 10px auto;
+        object-fit: cover;
+        border: 3px solid #ddd;
+    }
+
+    .btn-primary {
+        width: 100%;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+</style>
+
+<div class="form-container mt-4">
+    <h2 class="text-center">Chỉnh sửa Nhân Viên</h2>
+
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label>Họ tên</label>
+            <input asp-for="FullName" class="form-control" required placeholder="Nhập họ tên" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input asp-for="Email" class="form-control" type="email" required placeholder="Nhập email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Số điện thoại</label>
+            <input asp-for="PhoneNumber" class="form-control" placeholder="Nhập số điện thoại" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Giới tính</label>
+            <select asp-for="Gender" class="form-control" required>
+                <option value="">-- Chọn giới tính --</option>
+                <option value="Male" selected="@(Model.Gender == "Male")">Nam</option>
+                <option value="Female" selected="@(Model.Gender == "Female")">Nữ</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Ngày sinh</label>
+            <input asp-for="BirthDate" class="form-control" type="date" />
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+        </div>
+
+        <!-- Lựa chọn phòng ban -->
+        <div class="form-group">
+            <label>Phòng ban</label>
+            <select asp-for="DepartmentId" class="form-control">
+                <option value="">-- Chọn phòng ban --</option>
+                @if (ViewBag.Departments != null)
+                {
+                    foreach (var dept in ViewBag.Departments)
+                    {
+                        <option value="@dept.Id" selected="@(Model.DepartmentId == dept.Id)">@dept.DepartmentName</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <!-- Lựa chọn chức vụ -->
+        <div class="form-group">
+            <label>Chức vụ</label>
+            <select asp-for="PositionId" class="form-control">
+                <option value="">-- Chọn chức vụ --</option>
+                @if (ViewBag.Positions != null)
+                {
+                foreach (var pos in ViewBag.Positions)
+                {
+                    <option value="@pos.Id" selected="@(Model.PositionId == pos.Id)">@pos.PositionName</option>
+                }
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Mức lương</label>
+            <select asp-for="SalaryLevelId" class="form-control">
+                <option value="">-- Chọn mức lương --</option>
+                @if (ViewBag.SalaryLevels != null)
+                {
+                    foreach (var salary in ViewBag.SalaryLevels)
+                {
+                    <option value="@salary.Id" selected="@(Model.SalaryLevelId == salary.Id)">
+                        @salary.Level - @salary.MonthlySalary VNĐ
+                    </option>
+                }
+                }
+            </select>
+        </div>
+
+        <!-- Lựa chọn quyền (Role) -->
+        <div class="form-group">
+            <label>Quyền</label>
+            <select asp-for="RoleId" class="form-control">
+                <option value="">-- Chọn quyền --</option>
+                @if (ViewBag.Roles != null)
+                {
+                foreach (var role in ViewBag.Roles)
+                {
+                    <option value="@role.Id" selected="@(Model.RoleId == role.Id)">@role.RoleName</option>
+                }
+                }
+            </select>
+        </div>
+
+        <!-- Lựa chọn trạng thái -->
+        <div class="form-group">
+            <label>Trạng thái</label>
+            <select asp-for="Status" class="form-control">
+                <option value="Active" selected="@(Model.Status == "Active")">Đang làm việc</option>
+                <option value="Inactive" selected="@(Model.Status == "Inactive")">Nghỉ việc</option>
+            </select>
+        </div>
+
+        <!-- Lựa chọn loại hợp đồng -->
+        <div class="form-group">
+            <label>Loại hợp đồng</label>
+            <select asp-for="EmploymentType" class="form-control">
+                <option value="Full-time" selected="@(Model.EmploymentType == "Full-time")">Full-time</option>
+                <option value="Part-time" selected="@(Model.EmploymentType == "Part-time")">Part-time</option>
+                <option value="Contract" selected="@(Model.EmploymentType == "Contract")">Contract</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Mật khẩu</label>
+            <input asp-for="Password" class="form-control" type="password" placeholder="Nhập mật khẩu" />
+           
+        </div>
+
+        <!-- Ảnh đại diện -->
+        <div class="form-group text-center">
+            <label>Ảnh đại diện</label>
+            <input type="file" name="AvatarFile" class="form-control" />
+            @if (!string.IsNullOrEmpty(Model.Avatar))
+            {
+                <img src="@Model.Avatar" alt="Avatar" class="avatar-preview" />
+            }
+        </div>
+        <div class="text-center mt-3 d-flex justify-content-center gap-3">
+            <button type="submit" class="btn btn-primary px-4">💾 Lưu thay đổi</button>
+            <a asp-action="Index" class="btn btn-danger px-4">❌ Hủy</a>
+        </div>
+
+    </form>
+</div>

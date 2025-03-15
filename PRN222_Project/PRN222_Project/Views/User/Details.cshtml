@@ -1,0 +1,58 @@
+﻿@model PRN222_Project.Models.User
+
+@{
+    ViewData["Title"] = "Chi Tiết Nhân Viên";
+    var currentUserId = User.FindFirst("UserId")?.Value;
+    var currentUserRole = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value;
+    bool isAdmin = currentUserRole == "Admin";
+    bool isCurrentUser = currentUserId == Model.Id.ToString();
+}
+
+<h2>Thông Tin Nhân Viên</h2>
+
+<table class="table">
+    <tr>
+        <th>Họ và Tên:</th>
+        <td>@Model.FullName</td>
+    </tr>
+    <tr>
+        <th>Email:</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Giới Tính:</th>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr>
+        <th>Ngày Sinh:</th>
+        <td>@Model.BirthDate?.ToString("dd/MM/yyyy")</td>
+    </tr>
+    <tr>
+        <th>Phòng Ban:</th>
+        <td>@Model.Department?.DepartmentName</td>
+    </tr>
+    <tr>
+        <th>Chức Vụ:</th>
+        <td>@Model.Position?.PositionName</td>
+    </tr>
+    <tr>
+        <th>Ảnh Đại Diện:</th>
+        <td>
+            @if (!string.IsNullOrEmpty(Model.Avatar))
+            {
+                <img src="@Model.Avatar" alt="Avatar" width="150" height="150" />
+            }
+            else
+            {
+                <span>Không có ảnh</span>
+            }
+        </td>
+    </tr>
+</table>
+
+@if (isAdmin || isCurrentUser)
+{
+    <a href="@Url.Action("Edit", "User", new { id = Model.Id })" class="btn btn-primary">Chỉnh Sửa</a>
+}
+
+<a href="@Url.Action("Index", "User")" class="btn btn-secondary">Quay Lại</a>

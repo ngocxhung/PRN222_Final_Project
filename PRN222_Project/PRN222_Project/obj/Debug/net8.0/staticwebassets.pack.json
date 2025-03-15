@@ -1,0 +1,337 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PRN222_Project.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PRN222_Project.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\images\\pexels-helloaesthe-31146491.jpg",
+      "PackagePath": "staticwebassets\\images\\pexels-helloaesthe-31146491.jpg"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\40f0d65e-b751-4bda-807f-e8383c0f5cd9.png",
+      "PackagePath": "staticwebassets\\uploads\\40f0d65e-b751-4bda-807f-e8383c0f5cd9.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\46608dcc-c5ea-450d-86b0-dbf28deb8193.png",
+      "PackagePath": "staticwebassets\\uploads\\46608dcc-c5ea-450d-86b0-dbf28deb8193.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\54ac919d-2796-47d5-af02-f310e62feb8c.png",
+      "PackagePath": "staticwebassets\\uploads\\54ac919d-2796-47d5-af02-f310e62feb8c.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\5be7a8a3-f594-46d9-903e-5e180407ca9b.png",
+      "PackagePath": "staticwebassets\\uploads\\5be7a8a3-f594-46d9-903e-5e180407ca9b.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\678175cf-2bb4-4d7c-b2bf-151c35e8908f.png",
+      "PackagePath": "staticwebassets\\uploads\\678175cf-2bb4-4d7c-b2bf-151c35e8908f.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\69593fbf-179d-4655-88c2-f73e9a606da2.png",
+      "PackagePath": "staticwebassets\\uploads\\69593fbf-179d-4655-88c2-f73e9a606da2.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\6d26fd10-43b4-4794-a751-f1fa4d3dc6d8.png",
+      "PackagePath": "staticwebassets\\uploads\\6d26fd10-43b4-4794-a751-f1fa4d3dc6d8.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\75f16a35-2a4a-4202-b1de-80fe9fe2e26f.png",
+      "PackagePath": "staticwebassets\\uploads\\75f16a35-2a4a-4202-b1de-80fe9fe2e26f.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\86b84d62-4a25-470a-a6de-20d37fdb24a7.png",
+      "PackagePath": "staticwebassets\\uploads\\86b84d62-4a25-470a-a6de-20d37fdb24a7.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\87aa4808-1578-48ba-b05b-1dbd713d20be.jpg",
+      "PackagePath": "staticwebassets\\uploads\\87aa4808-1578-48ba-b05b-1dbd713d20be.jpg"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\8fb7cf65-e73f-4745-9887-cbc3840e2467.png",
+      "PackagePath": "staticwebassets\\uploads\\8fb7cf65-e73f-4745-9887-cbc3840e2467.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\a60a9699-903b-4e55-a091-8f56c3790247.png",
+      "PackagePath": "staticwebassets\\uploads\\a60a9699-903b-4e55-a091-8f56c3790247.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\a9278e92-d4fb-44b9-96ab-ea4a56089815.png",
+      "PackagePath": "staticwebassets\\uploads\\a9278e92-d4fb-44b9-96ab-ea4a56089815.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\c55b4e52-9c9a-43de-9708-dbd2ad79b221.png",
+      "PackagePath": "staticwebassets\\uploads\\c55b4e52-9c9a-43de-9708-dbd2ad79b221.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\d3d13600-8058-4a07-bcdf-d2d3c46776f2.png",
+      "PackagePath": "staticwebassets\\uploads\\d3d13600-8058-4a07-bcdf-d2d3c46776f2.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\d55ee0d0-8fad-4536-831b-3b9f98b7dae4.png",
+      "PackagePath": "staticwebassets\\uploads\\d55ee0d0-8fad-4536-831b-3b9f98b7dae4.png"
+    },
+    {
+      "Id": "D:\\PRN222\\PRN222_Project\\PRN222_Project\\PRN222_Project\\wwwroot\\uploads\\fc775ef7-bfff-4125-9c18-7e9491379c51.png",
+      "PackagePath": "staticwebassets\\uploads\\fc775ef7-bfff-4125-9c18-7e9491379c51.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PRN222_Project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PRN222_Project.props",
+      "PackagePath": "build\\PRN222_Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PRN222_Project.props",
+      "PackagePath": "buildMultiTargeting\\PRN222_Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PRN222_Project.props",
+      "PackagePath": "buildTransitive\\PRN222_Project.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
