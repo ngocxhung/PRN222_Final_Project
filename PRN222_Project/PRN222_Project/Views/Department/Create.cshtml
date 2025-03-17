@@ -1,0 +1,27 @@
+﻿@model PRN222_Project.Models.Department
+
+<h2>Thêm phòng ban</h2>
+<form asp-action="Create">
+    <div class="form-group">
+        <label>Tên phòng ban</label>
+        <input asp-for="DepartmentName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Phòng ban cha</label>
+        <select asp-for="ParentDepartmentId" class="form-control" asp-items="ViewBag.Departments">
+            <option value="">Không có</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Trạng thái</label>
+        <select asp-for="Status" class="form-control">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

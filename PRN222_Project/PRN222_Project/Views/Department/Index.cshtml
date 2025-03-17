@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PRN222_Project.Models.Department>
+
+<h2>Quản lý phòng ban</h2>
+<a asp-action="Create" class="btn btn-success">Thêm phòng ban</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên phòng ban</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.DepartmentName</td>
+                <td>@item.Status</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Sửa</a>
+                    <button class="btn btn-danger" onclick="showDeleteModal(@item.Id)">Xóa</button>
+                    <a asp-action="EmployeeList" asp-route-id="@item.Id" class="btn btn-info">Xem Nhân Viên</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<!-- Modal xác nhận xóa -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa phòng ban này không?
+            </div>
+            <div class="modal-footer">
+                <form id="deleteForm" method="post">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showDeleteModal(departmentId) {
+            var deleteForm = document.getElementById('deleteForm');
+            deleteForm.action = '/Department/Delete/' + departmentId;
+            var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+            deleteModal.show();
+        }
+    </script>
+}

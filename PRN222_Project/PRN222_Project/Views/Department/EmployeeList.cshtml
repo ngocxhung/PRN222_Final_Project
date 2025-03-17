@@ -1,0 +1,34 @@
+﻿@model PRN222_Project.Models.Department
+
+<h2>Danh sách nhân viên của phòng ban: @Model.DepartmentName</h2>
+
+@if (Model.Users == null || !Model.Users.Any())
+{
+    <p class="text-danger">Phòng ban này chưa có nhân viên.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Họ và Tên</th>
+                <th>Email</th>
+                <th>Chức vụ</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.FullName</td>
+                    <td>@user.Email</td>
+                    <td>@user.Position?.PositionName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<a asp-action="Index" class="btn btn-secondary">Quay lại</a>
