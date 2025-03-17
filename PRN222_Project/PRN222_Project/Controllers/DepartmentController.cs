@@ -90,16 +90,23 @@ namespace PRN222_Project.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            var department = await _context.Departments.FindAsync(id);
-            if (department == null)
-            {
-                return NotFound();
-            }
+            var department = await _context.Departments
+                .Include(d => d.Users) // Load danh sách nhân viên
+                .FirstOrDefaultAsync(d => d.Id == id);
 
+            if (department == null) return NotFound();
+
+            // Xóa tất cả nhân viên trong phòng ban
+            _context.Users.RemoveRange(department.Users);
+
+            // Xóa phòng ban
             _context.Departments.Remove(department);
+
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
+
 
         // Xem danh sách nhân viên theo từng phòng ban
         public async Task<IActionResult> EmployeeList(int id)
