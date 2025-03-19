@@ -36,7 +36,7 @@ namespace PRN222_Project.Controllers
         {
            
            var Users = _context.Users.Include( u => u.SalaryLevel).Include(u => u.Position)
-                .Where(u => u.DepartmentId == id && u.PositionId != 3).ToList();
+                .Where(u => u.DepartmentId == id).ToList();
             var DeName = await _context.Departments.FirstOrDefaultAsync(d => d.Id == id);
             if (DeName == null) return NotFound();
             ViewBag.DepartmentName = DeName.DepartmentName;
