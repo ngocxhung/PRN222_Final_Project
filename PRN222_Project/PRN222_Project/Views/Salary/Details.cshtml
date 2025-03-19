@@ -1,0 +1,65 @@
+﻿@model PRN222_Project.Models.SalaryLog
+
+@{
+    ViewData["Title"] = "Chi tiết lương";
+}
+
+<h2>Chi tiết lương của nhân viên</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">@Model.Employee.FullName</h4>
+        <p><strong>Email:</strong> @Model.Employee.Email</p>
+        <p><strong>Nhân viên ID:</strong> @Model.EmployeeId</p>
+    </div>
+</div>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Tháng</th>
+        <td>@Model.Month</td>
+    </tr>
+    <tr>
+        <th>Năm</th>
+        <td>@Model.Year</td>
+    </tr>
+    <tr>
+        <th>Số ngày làm hợp lệ</th>
+        <td>@Model.ValidDays</td>
+    </tr>
+    <tr>
+        <th>Số ngày nghỉ</th>
+        <td>@Model.InvalidDays</td>
+    </tr>
+    <tr>
+        <th>Tổng số ngày</th>
+        <td>@Model.TotalDays</td>
+    </tr>
+    <tr>
+        <th>Lương cơ bản</th>
+        <td>@Model.TotalSalary.ToString("C")</td>
+    </tr>
+    <tr>
+        <th>Phụ cấp / Thưởng</th>
+        <td>@Model.Bonus?.ToString("C")</td>
+    </tr>
+    <tr>
+        <th>Tổng thu nhập</th>
+        <td><strong>@(Model.TotalSalary + (Model.Bonus ?? 0))</strong></td>
+    </tr>
+    <tr>
+        <th>Cấp bậc lương</th>
+        <td>@Model.SalaryLevel</td>
+    </tr>
+    <tr>
+        <th>Người xử lý</th>
+        <td>@Model.ProcessedBy</td>
+    </tr>
+    <tr>
+        <th>Ngày xử lý</th>
+        <td>@Model.ProcessedAt?.ToString("dd/MM/yyyy - HH:mm")</td>
+    </tr>
+
+</table>
+
+<a asp-action="Index" class="btn btn-primary">Quay lại</a>

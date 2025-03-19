@@ -33,5 +33,5 @@ public partial class SalaryLog
 
     public int TotalDays { get; set; }
 
-    public virtual User Employee { get; set; } = null!;
+    public virtual User Employee { get; set; } 
 }
