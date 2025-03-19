@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PRN222_Project.Models.User>
+<h2>Danh sách nhân viên của phòng ban: @ViewBag.DepartmentName</h2>
+<a asp-action="Download" asp-route-id="@ViewBag.DepartmentId" class="btn btn-success">Tải về file</a>
+@if (Model == null )
+{
+    <p class="text-danger">Phòng ban này chưa có nhân viên.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Họ và Tên</th>
+                <th>Giới tính</th>
+                <th>Email</th>
+                <th>Lương theo ngày</th>
+                <th>Lương theo tháng</th>
+                <th>Chức vụ</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.FullName</td>
+                    <td>@user.Gender</td>
+                    <td>@user.Email</td>
+                    <td>@user.SalaryLevel.DailySalary</td>
+                    <td>@user.SalaryLevel.MonthlySalary</td>
+                    <td>@user.Position?.PositionName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<a asp-action="Index" class="btn btn-secondary">Quay lại</a>
