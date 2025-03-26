@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Báo Cáo Chấm Công Hàng Tháng";
+    int selectedMonth = ViewData["SelectedMonth"] != null ? (int)ViewData["SelectedMonth"] : DateTime.Now.Month;
+    int selectedYear = ViewData["SelectedYear"] != null ? (int)ViewData["SelectedYear"] : DateTime.Now.Year;
+}
+
+<h2 class="text-center">📊 Báo Cáo Chấm Công Hàng Tháng</h2>
+
+<form method="get" asp-controller="MonthlyAttendanceReport" asp-action="Index" class="mb-3">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="month">Chọn Tháng:</label>
+            <select id="month" name="month" class="form-control">
+                @for (int i = 1; i <= 12; i++)
+                {
+                    <option value="@i" selected="@(i == selectedMonth ? "selected" : null)">@i</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="year">Chọn Năm:</label>
+            <select id="year" name="year" class="form-control">
+                @for (int i = DateTime.Now.Year - 5; i <= DateTime.Now.Year; i++)
+                {
+                    <option value="@i" selected="@(i == selectedYear ? "selected" : null)">@i</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <button type="submit" class="btn btn-primary mt-4">📄 Xem Báo Cáo</button>
+        </div>
+    </div>
+</form>
+
+@if (ViewData["Reports"] != null)
+{
+    var reports = ViewData["Reports"] as IEnumerable<object>;
+
+    if (reports != null && reports.Any())
+    {
+        <h3 class="text-center mt-5">📋 Kết quả </h3>
+
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID Nhân Viên</th>
+                        <th>Tên Nhân Viên</th>
+                        <th>Tháng</th>
+                        <th>Năm</th>
+                        <th>Số Ngày Đi Làm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var report in reports)
+                    {
+                        <tr>
+                            <td>@report.GetType().GetProperty("userId")?.GetValue(report, null)</td>
+                            <td>@report.GetType().GetProperty("userName")?.GetValue(report, null)</td>
+                            <td>@report.GetType().GetProperty("month")?.GetValue(report, null)</td>
+                            <td>@report.GetType().GetProperty("year")?.GetValue(report, null)</td>
+                            <td>@report.GetType().GetProperty("workingDays")?.GetValue(report, null)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center mt-4">
+            ⚠ Không có dữ liệu chấm công trong tháng này!
+        </div>
+    }
+}
+
+
+@* @if (ViewData["Reports"] != null && ((List<dynamic>)ViewData["Reports"]).Count > 0)
+@* { *@
+@*     <h3 class="mt-4">📌 Kết quả báo cáo:</h3> *@
+@*     <table class="table table-bordered table-striped"> *@
+@*         <thead class="thead-dark"> *@
+@*             
+@*         </thead> *@
+@*         <tbody> *@
+@*             @foreach (var report in (List<dynamic>)ViewData["Reports"]) *@
+@*             { *@
+@*                 
+@*             } *@
+@*         </tbody> *@
+@*     </table> *@
+@* } *@

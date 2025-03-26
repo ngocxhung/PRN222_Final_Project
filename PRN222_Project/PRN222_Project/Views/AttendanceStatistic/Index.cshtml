@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Quản lý công & phép";
+}
+
+<h2 class="text-center mt-4 mb-4">📊 Quản lý công & phép</h2>
+
+<div class="container">
+    <div class="card shadow p-4">
+        <form method="get" asp-controller="AttendanceStatistic" asp-action="Index" class="row g-3">
+            <div class="col-md-4">
+                <label for="userId" class="form-label">🔹 Mã nhân viên (bỏ trống để xem tất cả):</label>
+                <input type="number" id="userId" name="userId" class="form-control" placeholder="Nhập ID nhân viên">
+            </div>
+
+            <div class="col-md-3">
+                <label for="month" class="form-label">📅 Tháng:</label>
+                <select id="month" name="month" class="form-select" required>
+                    @for (int i = 1; i <= 12; i++)
+                    {
+                        <option value="@i">@i</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label for="year" class="form-label">📆 Năm:</label>
+                <select id="year" name="year" class="form-select" required>
+                    @for (int i = DateTime.Now.Year - 5; i <= DateTime.Now.Year; i++)
+                    {
+                        <option value="@i">@i</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-30">🔍</button>
+            </div>
+        </form>
+    </div>
+
+    @if (ViewData["Reports"] != null && ((List<dynamic>)ViewData["Reports"]).Count > 0)
+    {
+        <h3 class="text-center mt-5">📋 Kết quả </h3>
+
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID Nhân Viên</th>
+                        <th>Tháng</th>
+                        <th>Năm</th>
+                        <th>📅 Ngày Làm Việc</th>
+                        <th>🚫 Ngày Nghỉ</th>
+                        <th>⏳ Ngày Làm Thêm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var report in (List<dynamic>)ViewData["Reports"])
+                    {
+                        <tr>
+                            <td>@report.userId</td>
+                            <td>@report.month</td>
+                            <td>@report.year</td>
+                            <td class="text-success fw-bold">@report.workingDays</td>
+                            <td class="text-danger fw-bold">@report.leaveDays</td>
+                            <td class="text-warning fw-bold">@report.overtimeDays</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else if (ViewData["Reports"] != null)
+    {
+        <div class="alert alert-warning text-center mt-4">
+            ⚠ Không có dữ liệu chấm công trong tháng này!
+        </div>
+    }
+</div>
+

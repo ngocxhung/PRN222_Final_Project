@@ -1,0 +1,25 @@
+﻿@model IEnumerable<PRN222_Project.Models.Checkout>
+@{
+    ViewData["Title"] = "Chấm Công Hàng Ngày";
+}
+
+<h2 class="text-center">Chấm Công Hàng Ngày</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info text-center">
+        @TempData["Message"]
+    </div>
+}
+
+<div class="d-flex justify-content-center gap-3 mt-4">
+    <form method="post" action="@Url.Action("CheckIn", "Attendance")">
+        <input type="hidden" name="userId" value="1" />
+        <button type="submit" class="btn btn-success px-4">Check-in</button>
+    </form>
+
+    <form method="post" action="@Url.Action("CheckOut", "Attendance")">
+        <input type="hidden" name="userId" value="1" />
+        <button type="submit" class="btn btn-danger px-4">Check-out</button>
+    </form>
+</div>
