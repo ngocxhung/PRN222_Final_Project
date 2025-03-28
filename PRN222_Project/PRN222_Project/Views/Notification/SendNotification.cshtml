@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Gửi thông báo";
+    var departments = ViewBag.Departments ?? new List<object>();
 }
 
 <h2>Gửi thông báo</h2>
@@ -15,5 +16,39 @@
                required>
         <small class="form-text text-muted">Tối đa 500 ký tự</small>
     </div>
-    <button id="sendButton" class="btn btn-primary" type="submit" >Gửi</button>
+
+    <div class="mb-3">
+        <label for="sendTypeSelect" class="form-label">Kiểu gửi</label>
+        <select id="sendTypeSelect" class="form-control">
+            <option value="all">Gửi tất cả</option>
+            <option value="department">Gửi theo phòng ban</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="departmentSelect" class="form-label">Chọn phòng ban</label>
+        <select id="departmentSelect" class="form-control" disabled>
+            <option value="">-- Chọn phòng ban --</option>
+            @foreach (dynamic dept in departments)
+            {
+                <option value="@dept.Id">@dept.Name</option>
+            }
+        </select>
+    </div>
+
+    <button id="sendButton" class="btn btn-primary" type="submit">Gửi</button>
 </div>
+
+@section Scripts {
+    <script>
+        // JavaScript để động hóa việc chọn phòng ban
+        document.addEventListener('DOMContentLoaded', function() {
+            var sendTypeSelect = document.getElementById('sendTypeSelect');
+            var departmentSelect = document.getElementById('departmentSelect');
+
+            sendTypeSelect.addEventListener('change', function() {
+                departmentSelect.disabled = this.value === 'all';
+            });
+        });
+    </script>
+}

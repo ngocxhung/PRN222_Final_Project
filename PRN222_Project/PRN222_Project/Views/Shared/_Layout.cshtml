@@ -83,6 +83,28 @@
     <script src="~/js/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/notification.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Script để xử lý khi chuyển trang bằng cách click link -->
+    <script>
+        document.querySelectorAll('a:not([href^="#"])').forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Chỉ áp dụng cho các link không phải là logout
+                if (this.href.includes('/Account/Logout')) return;
+
+                e.preventDefault();
+                const url = this.href;
+                console.log("Navigating to:", url);
+                history.pushState({}, '', url);
+                // Tải nội dung mới mà không làm mới trang (nếu cần SPA)
+                // Hoặc chỉ cần gọi lại initializeNotification
+                if (typeof initializeNotification === 'function') {
+                    initializeNotification();
+                }
+                // Nếu không dùng SPA, có thể chuyển trang bình thường
+                window.location.href = url;
+            });
+        });
+    </script>
 </body>
 </html>
 
