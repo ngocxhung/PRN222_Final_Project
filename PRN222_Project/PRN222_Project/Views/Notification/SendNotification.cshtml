@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Gửi thông báo";
+}
+
+<h2>Gửi thông báo</h2>
+
+<div class="card p-4">
+    <div class="mb-3">
+        <label for="notificationInput" class="form-label">Nội dung thông báo</label>
+        <input type="text"
+               id="notificationInput"
+               class="form-control"
+               placeholder="Nhập thông báo..."
+               maxlength="500"
+               required>
+        <small class="form-text text-muted">Tối đa 500 ký tự</small>
+    </div>
+    <button id="sendButton" class="btn btn-primary" type="submit" >Gửi</button>
+</div>

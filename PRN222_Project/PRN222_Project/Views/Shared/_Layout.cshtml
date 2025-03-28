@@ -7,25 +7,21 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PRN222_Project.styles.css" asp-append-version="true" />
+    <!-- Thêm Font Awesome để dùng biểu tượng chuông -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
-
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PRN222_Project</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">PRN222_Project</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
                     </ul>
                 </div>
                 <ul class="navbar-nav">
@@ -34,43 +30,42 @@
                         <li class="nav-item">
                             <p class="nav-link mb-0">Xin chào, <strong>@User.Identity.Name</strong></p>
                         </li>
+                        <!-- Thêm biểu tượng thông báo -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bell"></i>
+                                <span id="notificationCounter" class="badge bg-primary"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown" style="max-height: 300px; overflow-y: auto;">
+                                <li class="dropdown-header">Thông báo</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <div id="messageList"></div>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" data-bs-toggle="dropdown">
                                 <i class="fas fa-user-circle"></i> Tài khoản
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                              
+                            <ul class="dropdown-menu dropdown-menu-end">
                                 <li><hr class="dropdown-divider"></li>
-                                <li>
-                                    <a class="dropdown-item text-danger" href="/Account/Logout">
-                                        <i class="fas fa-sign-out-alt"></i> Đăng xuất
-                                    </a>
-                                </li>
+                                <li><a class="dropdown-item text-danger" href="/Account/Logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
                             </ul>
                         </li>
                     }
                     else
                     {
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Account/Login">
-                                <i class="fas fa-sign-in-alt"></i> Đăng nhập
-                            </a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
                     }
                 </ul>
-
-
-
             </div>
         </nav>
     </header>
+
     <div class="wrapper d-flex">
         @if (ViewData["ShowSidebar"] as bool? != false)
         {
             <partial name="_Sidebar" />
         }
-
-        <!-- Nội dung chính -->
         <div class="content flex-grow-1 p-4">
             @RenderBody()
         </div>
@@ -78,12 +73,30 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - PRN222_Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            © 2025 - PRN222_Project - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/notification.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+<style>
+    #notificationCounter:empty {
+        display: none; /* Ẩn badge nếu không có thông báo */
+    }
+
+    #messageList {
+        padding: 0 10px;
+    }
+
+        #messageList .notification-item {
+            padding: 5px 0;
+            word-wrap: break-word;
+        }
+</style>

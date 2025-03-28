@@ -2,9 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using PRN222_Project.Models;
+using SignalRSample.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddSignalR();
 // Cấu hình database
 builder.Services.AddDbContext<QuanLyNhanSuContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -42,5 +43,8 @@ app.UseEndpoints(endpoints =>
         name: "default",
         pattern: "{controller=Account}/{action=Login}/{id?}");
 });
-
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<NotificationHub>("/hubs/notification");
+});
 app.Run();

@@ -3,18 +3,21 @@
 }
 <div class="sidebar">
     <h4 class="text-center text-light py-3 border-bottom">📋 Menu</h4>
-    <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">🏠 Tổng quan</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="Index">👥 Quản lý Nhân Viên</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="Department" asp-action="Index">🏬 Quản lý Phòng Ban</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="Details" asp-route-id="@userId">🧑‍💼 Hồ Sơ</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="ReportAndStatistic" asp-action="Index">🏬 Báo cáo và thống kê</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="Salary" asp-action="Index">💰 Quản lý Lương</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="Attendance" asp-action="Index">⏳ Bảng chấm công</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="AttendanceStatistic" asp-action="Index">⏳ Quản lý công&phép</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="MonthlyAttendanceReport" asp-action="Index">⏳Báo cáo chấm công hàng tháng</a></li>
-        <li class="nav-item"><a class="nav-link" asp-controller="Notification" asp-action="Index">🔔 Thông báo</a></li>
-    </ul>
+    <div class="menu-container">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">🏠 Tổng quan</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="Index">👥 Quản lý Nhân Viên</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="Department" asp-action="Index">🏬 Quản lý Phòng Ban</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="Details" asp-route-id="@userId">🧑‍💼 Hồ Sơ</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="ReportAndStatistic" asp-action="Index">🏬 Báo cáo và thống kê</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="Salary" asp-action="Index">💰 Quản lý Lương</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="Attendance" asp-action="Index">⏳ Bảng chấm công</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="AttendanceStatistic" asp-action="Index">⏳ Quản lý công&phép</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="MonthlyAttendanceReport" asp-action="Index">⏳ Báo cáo chấm công hàng tháng</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="Notification" asp-action="Index">🔔 Thông báo</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="Notification" asp-action="SendNotification">📢 Gửi thông báo</a></li>
+        </ul>
+    </div>
 </div>
 
 <style>
@@ -23,25 +26,30 @@
         background: #222;
         color: white;
         position: fixed;
-        top: 56px; /* Cố định từ header */
+        top: 56px;
         left: 0;
-        bottom: 0; /* Giúp sidebar kéo dài đến footer */
-        height: calc(100vh - 56px); /* Đảm bảo chiều cao đúng */
+        bottom: 0;
+        height: calc(100vh - 56px);
         display: flex;
         flex-direction: column;
-        overflow-y: auto; /* Cuộn khi nội dung dài */
-        padding-top: 0; /* Bỏ padding nếu cần */
-        padding-bottom: 0; /* Bỏ padding nếu cần */
         z-index: 1000;
     }
 
-    /* Đảm bảo sidebar không bị đè footer */
-    .main-container {
-        display: flex;
-        min-height: calc(100vh - 56px); /* Chiều cao từ header đến footer */
+    .menu-container {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        padding-bottom: 10px;
     }
 
-    /* Điều chỉnh nội dung để không bị sidebar che */
+    .nav.flex-column {
+        margin-bottom: 0;
+    }
+
+    .main-container {
+        display: flex;
+        min-height: calc(100vh - 56px);
+    }
+
     .content {
         flex: 1;
         margin-left: 260px;
@@ -49,7 +57,6 @@
         overflow-y: auto;
     }
 
-    /* Footer không bị che */
     .footer {
         margin-left: 260px;
         text-align: center;
@@ -58,5 +65,4 @@
         position: relative;
         z-index: 10;
     }
-
 </style>
